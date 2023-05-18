@@ -5,8 +5,9 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build | tail -n1",
-    "serve": "vite preview"
+    "build": "vite build",
+    "serve": "vite preview",
+    "deploy": "yarn build && firebase deploy --only hosting"
   },
   "license": "MIT",
   "devDependencies": {
