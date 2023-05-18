@@ -5,9 +5,11 @@ export const Navbar = () => {
         <nav class='border-b py-2'>
             <ul class="flex gap-2 container mx-auto md:gap-4">
                 <li>
+                    <A href='/'>
                     <figure class='h-12 w-12'>
                         <img class='rounded border w-full' src={Logo} alt="React transformer logo" />
                     </figure>
+                    </A>
                 </li>
                 <li class='my-auto'>
                     <A href='/'>Home</A>

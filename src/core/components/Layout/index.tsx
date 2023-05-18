@@ -3,16 +3,11 @@ import { Router, Routes, Route } from "@solidjs/router";
 import { Navbar } from "../Navbar"
 import { Footer } from "../Footer"
 
-
 const App = () => {
-    return (
-        <div>
-            App
-        </div>
-    );
+    return 'app';
 }
 
-export const Layout = (props: { children: JSX.Element }) => {
+export const Layout = () => {
     return <Router>
         <Navbar />
         <main class="container mx-auto min-h-full">
