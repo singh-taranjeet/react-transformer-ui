@@ -11,11 +11,11 @@ export const Navbar = () => {
                     </figure>
                     </A>
                 </li>
-                <li class='my-auto hidden'>
+                <li class='my-auto'>
                     <A href='/'>Home</A>
                 </li>
-                <li class='my-auto hidden'>
-                    <A href='/docs'>Docs</A>
+                <li class='my-auto'>
+                    <A href='/playground'>Playground</A>
                 </li>
             </ul>
         </nav>

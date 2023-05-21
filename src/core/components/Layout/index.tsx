@@ -2,10 +2,8 @@ import { JSX, lazy } from "solid-js";
 import { Router, Routes, Route } from "@solidjs/router";
 import { Navbar } from "../Navbar";
 import { Footer } from "../Footer";
-
-// const Home = lazy(() => import('../../../pages/home'))
-
-import { Home } from "../../../pages/home";
+import {Home} from '../../../pages/Home'
+import { Playground } from "../../../pages/Playground";
 
 export const Layout = () => {
     return <Router>
@@ -13,6 +11,7 @@ export const Layout = () => {
         <main class="container mx-auto min-h-full p-2 md:p-0">
             <Routes>
                 <Route path={'/'} component={Home} />
+                <Route path={'/playground'} component={Playground} />
             </Routes>
         </main>
         <div class="relative mt-auto">

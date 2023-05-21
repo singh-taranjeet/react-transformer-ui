@@ -1,6 +1,4 @@
-import { Playground } from "../../core/components/Playground"
-
-
+import Hero from '../../assets/transformer-hero.jpeg';
 const list = [
     {
         question: 'What is React Transformer?',
@@ -30,15 +28,15 @@ const list = [
             </ul>
 
             <div class="flex gap-2">
-            <code class="rounded bg-slate-200">
-                {'<Replacer> This is very<<|Bold|powerfull>>.</Replacer>'}
-            </code>
+                <code class="rounded bg-slate-200 px-2">
+                    {'<Replacer> This is very<<|Bold|powerfull>>.</Replacer>'}
+                </code>
 
-            <i>Convert to </i>
+                <i>renders to </i>
 
-            <div class="rounded bg-slate-200">
-                This is very <b>powerfull</b>.
-            </div>
+                <div class="rounded bg-slate-200 px-2">
+                    This is very <b>powerfull</b>.
+                </div>
             </div>
 
         </div>
@@ -47,7 +45,19 @@ const list = [
 ]
 
 export const Home = () => {
-    return <article>
+    return <article class="py-2">
+
+        <div 
+            style={{"background-image" : `linear-gradient(to top, rgba(0, 0, 0, 0.8) 10%, transparent), url('${Hero}')`}}
+            class="flex items-center bg-cover bg-no-repeat w-full h-96 bg-center"
+        >
+            <div class="pt-16 w-full container flex flex-col">
+                <h1 class='text-white text-center  text-4xl pb-6 font-medium'>React Transformer</h1>
+                <p class='text-white text-center pb-4 font-light'>{'Convert simple string patterns to React components with React Transformer'}</p>
+                <a href='https://www.npmjs.com/package/@react-transformer/replacer' target='_blank' class='border rounded px-4 py-2 text-white md:w-fit font-medium mx-auto'>{'Get started'}</a>
+            </div>
+        </div>
+
         <section>
             {
                 list.map((item, index) => {
@@ -64,6 +74,5 @@ export const Home = () => {
                 })
             }
         </section>
-        <Playground />
     </article>
 }
